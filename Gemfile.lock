@@ -1,0 +1,44 @@
+PATH
+  remote: .
+  specs:
+    isbncli (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    colorize (0.8.1)
+    concurrent-ruby (1.2.2)
+    diff-lcs (1.5.0)
+    faker (3.1.1)
+      i18n (>= 1.8.11, < 2)
+    i18n (1.12.0)
+      concurrent-ruby (~> 1.0)
+    minitest (5.18.0)
+    rake (13.0.6)
+    rspec (3.12.0)
+      rspec-core (~> 3.12.0)
+      rspec-expectations (~> 3.12.0)
+      rspec-mocks (~> 3.12.0)
+    rspec-core (3.12.1)
+      rspec-support (~> 3.12.0)
+    rspec-expectations (3.12.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-mocks (3.12.5)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-support (3.12.0)
+
+PLATFORMS
+  x86_64-darwin-21
+
+DEPENDENCIES
+  colorize (~> 0.8.1)
+  faker (~> 3.1)
+  isbncli!
+  minitest (~> 5.0)
+  rake (~> 13.0)
+  rspec (~> 3.12)
+
+BUNDLED WITH
+   2.4.1

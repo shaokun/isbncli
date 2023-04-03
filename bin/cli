@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+require 'colorize'
+require_relative '../lib/isbncli.rb'
+
+begin
+  isbn = ARGV[0]
+
+  if isbn.nil?
+    puts "Please provide an ISBN as an argument".colorize(:yellow)
+    exit(1)
+  end
+
+  isbn = isbn.gsub('-', '')
+
+  validator = Isbncli::IsbnValidator.create(isbn)
+
+  if validator.valid?
+    puts "The ISBN #{isbn} is valid".colorize(:green)
+  else
+    puts "The ISBN #{isbn} is invalid, the check digit should be #{validator.calculate_check_digit} instead of #{validator.check_digit}".colorize(:red)
+  end
+
+rescue ArgumentError => e
+  puts e.message.colorize(:red)
+  exit(1)
+end
